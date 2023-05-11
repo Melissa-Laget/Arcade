@@ -13,17 +13,17 @@ for example the SFML, SDL2 with a nibbler game or a snake game.
 
 First we will need a `arcade::Size` that has a **width** and a **height**. This
 attribute can be found in the
-link : [<FrameBuffer.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/FrameBuffer.hpp) <br>
+link : [<FrameBuffer.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/FrameBuffer.hpp) <br>
 
 Then, we will need a `arcade::Pixel`, that has a **bool up**, it will show if
 the pixel was updated or not to be able to not draw it again if it was not
 updated, a **fg**, to print a color to the character (between 0 and 127), a **bg**,
 to print a color to the background (between 0 and 127) and a `char c` that
 is an enum of `arcade::Character` (you can find it in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 
 Also, you will need a `arcade::FrameBuffer`. You can find it in
-the [<FrameBuffer.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/FrameBuffer.hpp)
+the [<FrameBuffer.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/FrameBuffer.hpp)
 Be careful, the size of the vector **has** to be equal to `width * height` <br>
 
 You will also need a `arcade::STATUS`, that is an enum of four things:
@@ -33,25 +33,25 @@ You will also need a `arcade::STATUS`, that is an enum of four things:
 * **running**, continue to run <br>
 * **option**, call the `option` function in the current game. <br>
 
-You can find it in the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp)
+You can find it in the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp)
 
 You will then need a `arcade::EVENT` that is an enum of all the possible events,
 you can find it in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 &emsp; In those events, you will have **3** possibilities: <br>
 &emsp;&emsp; - The `ARCADE_KEY_SMT`, it's a key bind and is used by the game to
 know what key is pressed (it can be found in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 &emsp;&emsp; - The `ARCADE_SYS_SMT`, it's a system event that is intercepted by
 the core to know what to do (it can be found in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 &emsp;&emsp; - The `ARCADE_WIN_SMT`, it's a window event that is intercepted by
 the core to know what to do (it can be found in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 
 You will need a `arcade::Character` that will have all the possible forms of
 character, it is include in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp) <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp) <br>
 
 You will also need `arcade::Option`, it is only used by a `std::pair` containing
 the enum option and a string as arguments <br>
@@ -63,12 +63,12 @@ pair <br>
 &emsp;&emsp; - `RESTART`, restart the current game, second pair argument is
 ignored <br>
 &emsp;&emsp; - `QUIT`, go back to menu second pair argument is ignored
-You can find it in the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp)
+You can find it in the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp)
 
 To finish, you need a `arcade::LibType` that is an enum, it is used to know if
 the lib is a game, by using `GAME` or a graphical, by using `GRAPHICAL`. It is
 found in
-the [<Enum.hpp>](https://github.com/Ackfire/Arcade/blob/main/interfaces/Enum.hpp). <br>
+the [<Enum.hpp>](https://github.com/Melissa-Laget/Arcade/blob/main/interfaces/Enum.hpp). <br>
 
 ### Graphics Libraries
 
@@ -176,7 +176,7 @@ virtual void display() = 0;
 <br>
 
 You can find an example of implementation with this
-link : [SFML graphic library implementation](https://github.com/Ackfire/Arcade/blob/main/libs/display/sfml/src/DisplaySfml.cpp)
+link : [SFML graphic library implementation](https://github.com/Melissa-Laget/Arcade/blob/main/libs/display/sfml/src/DisplaySfml.cpp)
 
 <br>
 
@@ -254,7 +254,7 @@ virtual std::pair<arcade::OPTIONS, std::string> option() = 0;
 ```
 
 You can find an example of implementation with this
-link : [Snake game library implementation](https://github.com/Ackfire/Arcade/blob/main/libs/games/snake/src/GameSnake.cpp)
+link : [Snake game library implementation](https://github.com/Melissa-Laget/Arcade/blob/main/libs/games/snake/src/GameSnake.cpp)
 
 You can find the dependency graph of the project with this image:
 
