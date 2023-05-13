@@ -24,7 +24,7 @@ The goal of this project was to create an **Arcade** in **C++** with the **SFML,
 
 <br>
 
-To try this program, you can to use this **command** to automatically play the game and when you quit it, clean the repository: <br>
+To try this program, you can to use this **command**: <br>
 
 ```bash
 mkdir -p build && cd build && cmake .. && make && ./arcade
